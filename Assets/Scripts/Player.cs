@@ -19,7 +19,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = Input.GetAxis("Horizontal") * movementSpeed;
+        // TODO:
+        // for pc
+        //movement = Input.GetAxis("Horizontal") * movementSpeed;
+
+        // for phone
+        //movement = Input.acceleration.x * movementSpeed;
 
     }
     private void FixedUpdate()

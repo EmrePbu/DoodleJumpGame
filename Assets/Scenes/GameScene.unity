@@ -267,10 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformPrefab: {fileID: 885690587968489783, guid: e29937b651ec9f94fb495099dba63806, type: 3}
-  numberOfPlatforms: 150
-  levelWidth: 1
-  minY: 0.1
-  maxY: 1
+  numberOfPlatforms: 100
+  levelWidth: 3
+  minY: 0.2
+  maxY: 1.5
 --- !u!1 &657510664
 GameObject:
   m_ObjectHideFlags: 0
