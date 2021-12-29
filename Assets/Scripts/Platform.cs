@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public float jumpForce = 7f;
+    public float jumpForce = 10f;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Rigidbody2D rigidbody2D = collision.collider.GetComponent<Rigidbody2D>();
-        if (rigidbody2D != null)
+        if (collision.relativeVelocity.y <= 0f)
         {
-            Vector2 velocity = rigidbody2D.velocity;
-            velocity.y = jumpForce;
-            rigidbody2D.velocity = velocity;
+            Rigidbody2D rigidbody2D = collision.collider.GetComponent<Rigidbody2D>();
+            if (rigidbody2D != null)
+            {
+                Vector2 velocity = rigidbody2D.velocity;
+                velocity.y = jumpForce;
+                rigidbody2D.velocity = velocity;
+            }
         }
     }
 }
